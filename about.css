@@ -1,0 +1,508 @@
+/*
+  @Author : Fractalink Design Studio
+  @Dev : Irfan Khan
+  @Date : 29th June 2014 ;
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500);
+
+html,
+body,
+a,
+p,
+h1,
+h2,
+aside,
+header{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: rgb(0, 0, 33);
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 33);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    font-family: 'Dancing Script', cursive;
+    color: gold;
+    margin: 30px;
+/* font-family: 'Lobster', cursive;
+font-family: 'Marck Script', cursive;
+font-family: 'Poppins', sans-serif; */
+    font-size: 1.5rem;
+}
+
+h1,
+h2{
+    font-weight: normal;
+}
+
+/*** Option 1 Style ***/
+
+body {
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    background: #222;
+    margin: 50px 0;
+    -webkit-box-reflect: below 3px -webkit-gradient(linear, left 40%, left 100%, from(transparent), to(rgba(250, 250, 250, 0.3)));
+}
+
+.profile-card {
+    width: 660px;
+    height:771px;
+    position: relative;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition-duration: 1.2s;
+    -webkit-transition-duration: 1.2s;
+    cursor:pointer;
+}
+
+.profile-card header {
+    background: url(http://fractalink.com/works/contest/irfan/card_sprite.png) no-repeat 0 0 #b34f90;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    animation-name: spriteani;
+    animation-timing-function: steps(35);
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: spriteani;
+    -webkit-animation-timing-function: steps(35);
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    color: #ffffff;
+}
+
+
+
+@-webkit-keyframes spriteani {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -11550px;
+    }
+}
+
+@keyframes spriteani {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -11550px;
+    }
+}
+
+.profile-card header::before
+{
+  content: url(http://fractalink.com/works/contest/irfan/arrow.png) no-repeat 0 0 transparent;
+  color: #ffffff;
+  position: absolute;
+  right: 13px;
+  bottom: 7px;
+  width: 32px;
+  height: 32px;
+   animation: arrowInd 1s 4.6s ease-in-out backwards infinite;
+    -webkit-animation: arrowInd 1s 4.6s ease-in-out backwards infinite;
+
+    opacity:0;
+
+}
+
+@-webkit-keyframes arrowInd {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes arrowInd {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.profile-card header a {
+    left: 119px;
+    position: absolute;
+    top: 90px;
+    animation: bounceIn 1s 1.2s ease-in-out both;
+    -webkit-animation: bounceIn 1s 1.2s ease-in-out both;
+
+}
+
+.profile-card header h1 {
+    font-size: 42px;
+    left: 300px;
+    position: absolute;
+    top: 126px;
+    font-weight: 200;
+    letter-spacing: -3px;
+    animation: fadeInRight 0.8s 2.2s ease-in-out both;
+    -webkit-animation: fadeInRight 0.8s 2.2s ease-in-out both;
+    opacity: 0;
+    text-transform: uppercase;
+}
+
+.profile-card header h2::before {
+    content: " ";
+    color: #ffffff;
+    font-size: 17px;
+    margin-right: 8px;
+    transform: rotateZ(90deg) skewX(0deg);
+    -webkit-transform: rotateZ(90deg) skewX(0deg);
+    position: absolute;
+    left: 0;
+    height: 9px;
+    width: 0px;
+    border-left: solid 3px #fff;
+    border-right: solid 3px #fff;
+    top: 2px;
+    animation: rotateBar 2s 2.4s forwards;
+    -webkit-animation: rotateBar 2s 2.4s forwards;
+    text-transform: uppercase;
+}
+
+.profile-card header h2 {
+    font-size: 12px;
+    font-weight: bold;
+    left: 300px;
+    position: absolute;
+    top: 176px;
+    padding-left: 20px;
+    animation: fadeInRight 0.8s 2.4s ease-in-out both;
+    -webkit-animation: fadeInRight 0.8s 2.4s ease-in-out both;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.profile-card .profile-bio {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    background: url(http://fractalink.com/works/contest/irfan/flipbg_opt.png) no-repeat 0 0 5 black;
+    z-index: 2;
+}
+
+.profile-card .profile-bio p {
+    color: #ffffff;
+    font-size: 14px;
+    left: 122px;
+    position: absolute;
+    right: 100px;
+    top: 112px;
+    text-align: center;
+    opacity: 0;
+    line-height: 19px;
+    letter-spacing: 2px;
+}
+
+.profile-social-links {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 660px;
+    height:700px;
+    padding: 200px 0 0 245px;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.profile-social-links li {
+    margin-right: 20px;
+    -webkit-filter: brightness(345%);
+    filter: brightness(345%);
+    opacity: 0;
+}
+
+.profile-social-links li,
+.profile-social-links li a,
+.profile-social-links li a img {
+    float: left;
+}
+
+.profile-social-links li a img {
+    width: 40px;
+}
+
+.profile-social-links li:nth-child(1) img {
+    width: 48px;
+    margin-top: -4px;
+}
+
+body:hover .profile-card {
+    webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+body:hover .profile-bio p {
+    animation: fadeInUp 0.3s 1s ease-in-out forwards;
+    -webkit-animation: fadeInUp 0.3s 1s ease-in-out forwards;
+}
+
+body:hover .profile-social-links li:nth-child(1) {
+    animation: socInLeft 0.6s 1.4s ease both;
+    -webkit-animation: socInLeft 0.6s 1.4s ease both;
+}
+
+body:hover .profile-social-links li:nth-child(2) {
+    animation: socInMiddle 0.6s 1.6s ease both;
+    -webkit-animation: socInMiddle 0.6s 1.6s ease both;
+}
+
+body:hover .profile-social-links li:nth-child(3) {
+    animation: socInRight 0.6s 1.8s ease both;
+    -webkit-animation: socInRight 0.6s 1.8s ease both;
+}
+
+@-webkit-keyframes socInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes socInLeft {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes socInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes socInRight {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes socInMiddle {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes socInMiddle {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.3);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+    }
+    70% {
+        -webkit-transform: scale(.8);
+    }
+    100% {
+        -webkit-transform: scale(0.9);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(20px) skew(-10deg, 0deg);
+        ;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0) skew(0deg, 0deg);
+        ;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px) skew(-10deg, 0deg);
+        ;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) skew(0deg, 0deg);
+        ;
+    }
+}
+
+@-webkit-keyframes rotateBar {
+    40% {
+        width: 0;
+        -webkit-transform: rotateZ(90deg) skewX(0deg);
+    }
+    60% {
+        width: 0;
+        -webkit-transform: rotateZ(0deg) skewX(-29deg);
+    }
+    100% {
+        width: 5px;
+        -webkit-transform: rotateY(0deg) skewX(-29deg);
+    }
+}
+
+@keyframes rotateBar {
+    40% {
+        width: 0;
+        transform: rotateZ(90deg) skewX(0deg);
+    }
+    60% {
+        width: 0;
+        transform: rotateZ(0deg) skewX(-29deg);
+    }
+    100% {
+        width: 5px;
+        transform: rotateY(0deg) skewX(-29deg);
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h1{
+    font-size: 4rem;
+    color: blueviolet;
+}
+
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANUPAM -DEVELOPER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Marck+Script&family=Poppins:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+
+    
+<style>
+    body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        display: flex;
+        background-color: rgba(137, 43, 226, 0.908);
+        align-items: center;
+        justify-content: space-around;
+        height: 100px;
+    }
+
+    .left {
+        font-size: 2rem;
+        color: aquamarine;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 23px;
+    }
+
+    .first {
+        display: flex;
+        justify-content: space-around;
+        margin: 23px 0;
+    }
+
+    .leftsection {
+        font-size: 3rem;
+        width: 50%;
+        margin: 66px 0;
+    }
+
+    .rightsection {
+        width: 30%;
+    }
+
+    .phto1 {
+        width: 500px;
+    }
+
+    .purple {
+        color: blueviolet;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        color: rgb(165, 255, 127);
+        font-size: 2rem;
+    }
+
+    #element {
+        color: chartreuse;
+    }
+    .second{
+      font-family: 'Dancing Script', cursive;
+/* font-family: 'Marck Script', cursive;
+font-family: 'Poppins', sans-serif; */
+        max-width: 25vw;
+        margin: auto;
+        margin-top: 117px;
+        font-size: 5rem;
+    }
+
+    /* Media Queries for responsiveness */
+    @media (max-width: 768px) {
+        .leftsection {
+            font-size: 2.5rem;
+        }
+        .rightsection {
+            width: 40%;
+        }
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+            height: auto;
+        }
+        .left,
+        nav ul {
+            margin-bottom: 10px;
+        }
+        .first {
+            flex-direction: column;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 10px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .leftsection {
+            font-size: 2rem;
+        }
+        .rightsection {
+            width: 50%;
+        }
+        .phto1 {
+            width: 100%;
+        }
+    }
+    hr{
+        order: 0;
+        background-color: blueviolet;
+        margin-top: 34px;
+        margin-left: 34px;
+        margin-right: 34px;
+    }
+    
+</style>
+
+
+        
+        
+    
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <div class="left">
+                Anupam's Portfolio
+            </div>
+            <div class="right">
+            <ul>
+               <li><a href="about.html">About</a></li>
+               <li><a href="myproject.html">My project</a></li>
+               <!-- <li><a href="/">Services</a></li> -->
+               <li><a href="contactus.html">Contact me</a></li>
+               <li><a href="coding.html">My coding profile</a></li>
+               
+                 
+                
+            </ul>
+
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="first">
+        <div class="leftsection">
+            Hi,My name is <span class="purple">Anupam</span>
+            and I am passionate web develper
+            <span id="element"></span>
+
+            
+        </div>
+        
+        <div class="rightsection">
+            <img class="phto1" src="https://webstockreview.net/images/engineer-clipart-software-developer-13.png" alt="not found">
+        </div>
+        </div>
+        <hr>
+        <div class="second">
+            <h1>Hello recruiter</h1>
+        </div>
+    </main>
+    <div class="artboard">
+      <div class="card">
+     
+       <div class="card__side card__side--back">
+        <div class="card__cover">
+         <h4 class="card__heading">
+          <span class="card__heading-span">My skill Set</span>
+         </h4>
+        </div>
+        <div class="card__details">
+         <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>javascript</li>
+          <li>React(javascipt framework)</li>
+          <li>Node js</li>
+          <li>Express</li>
+          <li>Mongodb & MYSQL(as a Database)</li>
+         </ul>
+        
+        </div>
+       </div>
+     
+       <div class="card__side card__side--front">
+        <div class="card__theme">
+         <div class="card__theme-box">
+          <p class="card__subject">Web Developer</p>
+          <p class="card__title">ANUPAM SINGH</p>
+         </div>
+        </div>
+       </div>
+     
+      </div>
+     </div>
+     <!-- <script type="text/javascript" src="js/index.js"></script> -->
+     <script type="text/javascript" src="index.js"></script>
+  
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['<i>Frontend</i> developer.', '&amp; a Backend developer.'],
+          typeSpeed: 50,
+        });
+
+
+      </script>
+
+
+</body>
+</html>
